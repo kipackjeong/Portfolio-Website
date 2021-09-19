@@ -1,0 +1,19 @@
+#contact {
+}
+#contact h2 {
+  font-weight: var(--weight-bold);
+}
+.contact_icons {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin: auto;
+}
+
+.contact_icons_icon {
+  width: 100%;
+}
+
+.contact_icons_icon img {
+  width: 4em;
+}

@@ -1,53 +1,27 @@
-import Scroll, { Link } from 'react-scroll'
-import './Menu.css'
+import { Link } from 'react-scroll'
+import styles from './Menu.module.css'
 const Menu = () => {
+  const items = [
+    { title: 'Home', link: 'header' },
+    { title: 'About', link: 'about' },
+    { title: 'Work', link: 'work' },
+    { title: 'Contact', link: 'contact' },
+  ]
   return (
-    <div className="nav__menu">
-      <Link
-        className="nav__menu__item"
-        style={{ cursor: 'pointer' }}
-        to="header"
-        spy={true}
-        smooth={true}
-        offset={50}
-        duration={500}
-      >
-        Home
-      </Link>
-      <Link
-        className="nav__menu__item"
-        style={{ cursor: 'pointer' }}
-        to="about"
-        spy={true}
-        smooth={true}
-        offset={-100}
-        duration={500}
-      >
-        About
-      </Link>
-      <Link
-        className="nav__menu__item"
-        style={{ cursor: 'pointer' }}
-        to="work"
-        spy={true}
-        smooth={true}
-        offset={0}
-        duration={500}
-      >
-        Work
-      </Link>
-
-      <Link
-        className="nav__menu__item"
-        style={{ cursor: 'pointer' }}
-        to="contact"
-        spy={true}
-        smooth={true}
-        offset={50}
-        duration={500}
-      >
-        Contact
-      </Link>
+    <div className={styles.menu}>
+      {items.map((item) => (
+        <Link
+          className={styles.menu__item}
+          style={{ cursor: 'pointer' }}
+          to={item.link}
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}
+        >
+          {item.title}
+        </Link>
+      ))}
     </div>
   )
 }

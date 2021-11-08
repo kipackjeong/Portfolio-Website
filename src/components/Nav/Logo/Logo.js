@@ -1,9 +1,9 @@
 import logoIcon from '../../../images/logo.png'
-import './Logo.css'
+import styles from './Logo.module.css'
 const Logo = () => {
   return (
-    <div className="nav__logo">
-      <img src={logoIcon} alt="icon" className="nav__logo__icon" />
+    <div className={styles.logo}>
+      <img src={logoIcon} alt="icon" className={styles.logo__icon} />
     </div>
   )
 }

@@ -23,7 +23,10 @@
   --weight-semi-bold: 500;
   --weight-regular: 400;
 }
-
+h1 {
+  color: white;
+  font-size: var(--font-large);
+}
 .App {
   display: flex;
   flex-direction: column;

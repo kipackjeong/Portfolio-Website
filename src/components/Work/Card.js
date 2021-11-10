@@ -17,7 +17,7 @@ const Card = ({ heading, imgUrl, techImage, projectLink }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h4 className="header">{heading}</h4>
+          <h1 className="project-name">{heading}</h1>
           <div className="tech-images">
             {techImage.map((image, i) =>
               image !== '' ? (

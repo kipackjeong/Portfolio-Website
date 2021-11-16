@@ -1,0 +1,19 @@
+.layout {
+  width: 100%;
+  overflow-x: unset;
+}
+.main {
+  width: 100%;
+}
+section {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 720px) {
+  .layout {
+    overflow-x: hidden;
+  }
+}

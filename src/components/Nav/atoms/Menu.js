@@ -1,12 +1,5 @@
 import { Link } from 'react-scroll'
-import styles from './Menu.module.css'
-const Menu = () => {
-  const items = [
-    { title: 'Home', link: 'header' },
-    { title: 'About', link: 'about' },
-    { title: 'Work', link: 'work' },
-    { title: 'Contact', link: 'contact' },
-  ]
+const Menu = ({ items, styles }) => {
   return (
     <div className={styles.menu}>
       {items.map((item) => (

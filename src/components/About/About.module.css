@@ -1,0 +1,11 @@
+.about {
+}
+.about__introduction {
+  width: 60%;
+}
+
+@media only screen and (max-width: 768px) {
+  .about__introduction {
+    width: 95%;
+  }
+}

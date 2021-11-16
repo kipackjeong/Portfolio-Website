@@ -1,25 +1,26 @@
 import React from 'react'
+import IconFrame from './atoms/IconFrame'
 import emailIcon from '../../images/mail.ico'
 import linkedInIcon from '../../images/linkedin.ico'
 import phoneIcon from '../../images/phone.ico'
-import './Contact.css'
+import styles from './Contact.module.css'
 const Contact = () => {
   return (
-    <section id="contact" className="container">
+    <section id="contact" className="contact">
       <h2>Let's talk</h2>
-      <div class="contact_icons">
-        <div className="contact_icons_icon">
-          <a href="mailto: kipack.jeong@outlook.com">
-            <img src={emailIcon} alt="email" />
-          </a>
-        </div>
-        <div className="contact_icons_icon">
+      <div className={styles.contact__icons}>
+        <IconFrame
+          styles={styles}
+          link="mailto: kipack.jeong@outlook.com"
+          iconImg={emailIcon}
+        />
+        <div className={styles.contact__icons__icon}>
           <a href="https://www.linkedin.com/in/kipack-jeong">
             <img src={linkedInIcon} alt="linkedin" />
           </a>
         </div>
 
-        <div className="contact_icons_icon">
+        <div className={styles.contact__icons__icon}>
           <a href="tel:8475108233">
             <img src={phoneIcon} alt="phone" />
           </a>

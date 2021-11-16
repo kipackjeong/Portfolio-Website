@@ -1,7 +1,6 @@
-import './ContactButton.css'
-const ContactButton = () => {
+const ContactButton = ({ styles }) => {
   return (
-    <div className="contact-container">
+    <div className={styles.header__frame__contact}>
       <figure>
         <a href="tel:8475108233">
           <div>

@@ -1,14 +1,15 @@
-import TypeWriter from './TypeWriter'
-import ContactButton from './ContactButton'
-import Profile from './Profile'
-import './Header.css'
+import TypeWriter from './atoms/TypeWriter'
+import ContactButton from './atoms/ContactButton'
+import Profile from './atoms/Profile'
+import data from '../../data/data'
+import styles from './Header.module.css'
 const Header = () => {
   return (
-    <header id="header">
-      <div className="header__frame">
-        <Profile></Profile>
-        <TypeWriter></TypeWriter>
-        <ContactButton></ContactButton>
+    <header id="header" className={styles.header}>
+      <div className={styles.header__frame}>
+        <Profile styles={styles}></Profile>
+        <TypeWriter styles={styles} message={data.headerMessage}></TypeWriter>
+        <ContactButton styles={styles}></ContactButton>
       </div>
     </header>
   )

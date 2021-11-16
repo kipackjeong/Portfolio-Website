@@ -26,6 +26,11 @@
 h1 {
   color: white;
   font-size: var(--font-large);
+  font-weight: var(--weight-semi-bold);
+}
+
+h2 {
+  font-weight: var(--weight-regular);
 }
 .App {
   display: flex;
@@ -34,30 +39,8 @@ h1 {
   text-align: center;
   background-image: url('./images/header-bg.png');
   background-repeat: no-repeat;
+  background-size: contain;
   background-attachment: fixed;
   background-color: black;
   color: var(--color-white);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

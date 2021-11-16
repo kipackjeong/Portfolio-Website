@@ -1,14 +1,5 @@
 .skills {
-  width: 80vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-.skills h1 {
-  font-size: 3rem;
-  line-height: 20px;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -28,4 +19,14 @@
 }
 .grid p {
   font-size: 14px;
+}
+@media only screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid img {
+    height: 5rem;
+    width: 5rem;
+    margin: none;
+  }
 }

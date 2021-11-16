@@ -1,31 +1,30 @@
 import { Fade } from 'react-reveal'
 import Card from './Card'
 import data from '../../data/data'
-import './Work.css'
+import styles from './Work.module.css'
 const Work = () => {
   return (
-    <div className="section" id="work">
-      <div className="container">
-        <div className="work-wrapper">
-          <Fade bottom>
-            <h1 className="title">WORK</h1>
-          </Fade>
-          <div className="grid">
-            <Fade bottom cascade>
-              {data.projects.map((project, index) => (
-                <Card
-                  key={index}
-                  heading={project.title}
-                  techImage={project.techImage}
-                  imgUrl={project.imageSrc}
-                  projectLink={project.url}
-                ></Card>
-              ))}
-            </Fade>
-          </div>
-        </div>
+    <section id="work" className={styles.work}>
+      <h1>WORK</h1>
+
+      <Fade bottom></Fade>
+      <div className={styles.work__frame}>
+        <Fade bottom cascade>
+          {data.projects.map((project, index) => (
+            <div className={styles.work__frame__card_cont}>
+              <Card
+                key={index}
+                heading={project.title}
+                techImage={project.techImage}
+                imgUrl={project.imageSrc}
+                projectLink={project.url}
+                styles={styles}
+              ></Card>
+            </div>
+          ))}
+        </Fade>
       </div>
-    </div>
+    </section>
   )
 }
 export default Work

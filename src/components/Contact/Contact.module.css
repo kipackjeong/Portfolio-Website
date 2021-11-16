@@ -1,0 +1,15 @@
+.contact__icons {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: auto;
+}
+
+.contact__icons__icon {
+  width: 100%;
+}
+
+.contact__icons__icon img {
+  width: 4em;
+}

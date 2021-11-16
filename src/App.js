@@ -1,20 +1,24 @@
 import Layout from './components/Layout/Layout'
+import Nav from './components/Nav/Nav'
 import Header from './components/Header/Header'
 import Skills from './components/Skills/Skills'
 import About from './components/About/About'
 import Work from './components/Work/Work'
 import Contact from './components/Contact/Contact'
-import './App.css'
+import styles from './App.module.css'
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Layout>
-        <Header />
-        <About />
-        <Skills />
-        <Work />
-        <Contact />
+        <Nav></Nav>
+        <main className="main">
+          <Header />
+          <About />
+          <Skills />
+          <Work />
+          <Contact />
+        </main>
       </Layout>
     </div>
   )

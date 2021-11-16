@@ -1,9 +1,8 @@
 import React from 'react'
-import './Card.css'
-const Card = ({ heading, imgUrl, techImage, projectLink }) => {
+const Card = ({ styles, heading, imgUrl, techImage, projectLink }) => {
   return (
     <div
-      className="card"
+      className={styles.work__frame__card}
       style={{
         backgroundImage:
           'linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(0, 0, 0, 0.2)),url(' +
@@ -11,17 +10,17 @@ const Card = ({ heading, imgUrl, techImage, projectLink }) => {
           ')',
       }}
     >
-      <div className="content">
+      <div className={styles.work__frame__card__content}>
         <a
           href={projectLink ? projectLink : '#'}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h1 className="project-name">{heading}</h1>
-          <div className="tech-images">
+          <h1>{heading}</h1>
+          <div className={styles.tech_imgs}>
             {techImage.map((image, i) =>
               image !== '' ? (
-                <div className="tech-images_container">
+                <div className={styles.tech_imgs__container}>
                   <img key={i} src={image} alt={image.toString()} />
                 </div>
               ) : null,

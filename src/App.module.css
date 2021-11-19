@@ -30,6 +30,7 @@ h1 {
 }
 
 h2 {
+  color: white;
   font-weight: var(--weight-regular);
 }
 .App {

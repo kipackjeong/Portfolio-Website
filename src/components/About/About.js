@@ -1,3 +1,4 @@
+import React from 'react'
 import profilePic2 from '../../images/profile2.png'
 import data from '../../data/data'
 import styles from './About.module.css'

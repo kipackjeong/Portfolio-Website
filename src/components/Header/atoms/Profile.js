@@ -1,3 +1,4 @@
+import React from 'react'
 import profilePic from '../../../images/profile.png'
 
 const Profile = ({ styles }) => {

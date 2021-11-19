@@ -70,31 +70,31 @@ const data = {
   projects: [
     {
       title: 'Food Order App',
-      url: 'https://raphilo92.github.io/FoodReactApp/',
+      url: 'https://kipackjeong.github.io/FoodReactApp/',
       techImage: [reactImage, jsImage],
       imageSrc: foodAppImage,
     },
     {
       title: 'Daily App',
-      url: 'https://github.com/raphilo92/DailyWebApp',
+      url: 'https://github.com/kipackjeong/DailyWebApp',
       techImage: [blazorImage, netImage, csharpImage],
       imageSrc: dailyImage,
     },
     {
       title: 'Job Scrapper',
-      url: 'https://github.com/raphilo92/Webscrapper_JobSearch',
+      url: 'https://github.com/kipackjeong/Webscrapper_JobSearch',
       techImage: [flaskImage, pythonImage],
       imageSrc: webScrapperImage,
     },
     {
       title: 'Portfolio Website',
-      url: 'https://github.com/raphilo92/Portfolio-Website',
+      url: 'https://github.com/kipackjeong/Portfolio-Website',
       techImage: [reactImage, jsImage],
       imageSrc: portfolioImage,
     },
     {
       title: 'Tetris Console Game',
-      url: 'https://github.com/raphilo92/Tetris',
+      url: 'https://github.com/kipackjeong/Tetris',
       techImage: [csharpImage],
       imageSrc: tetrisImage,
     },

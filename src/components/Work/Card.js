@@ -1,4 +1,5 @@
 import React from 'react'
+
 const Card = ({ styles, heading, imgUrl, techImage, projectLink }) => {
   return (
     <div
@@ -16,7 +17,7 @@ const Card = ({ styles, heading, imgUrl, techImage, projectLink }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h1>{heading}</h1>
+          <h2>{heading}</h2>
           <div className={styles.tech_imgs}>
             {techImage.map((image, i) =>
               image !== '' ? (

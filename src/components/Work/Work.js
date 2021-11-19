@@ -1,3 +1,4 @@
+import React from 'react'
 import { Fade } from 'react-reveal'
 import Card from './Card'
 import data from '../../data/data'

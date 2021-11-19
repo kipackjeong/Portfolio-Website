@@ -1,3 +1,4 @@
+import React from 'react'
 import TypeWriter from './atoms/TypeWriter'
 import ContactButton from './atoms/ContactButton'
 import Profile from './atoms/Profile'

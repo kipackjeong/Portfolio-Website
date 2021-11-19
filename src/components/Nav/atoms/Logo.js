@@ -1,3 +1,4 @@
+import React from 'react'
 import logoIcon from '../../../images/logo.png'
 const Logo = ({ styles }) => {
   return (

@@ -1,3 +1,5 @@
+import React from 'react'
+
 const ContactButton = ({ styles }) => {
   return (
     <div className={styles.header__frame__contact}>

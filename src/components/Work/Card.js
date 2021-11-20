@@ -2,7 +2,6 @@ import React from 'react'
 import LazyLoad from 'react-lazyload'
 
 const Card = ({ styles, heading, imgUrl, techImage, projectLink }) => {
-  const loadingImage = <img src="/src/images/projects/blank.jpg" alt="loader" />
   return (
     <LazyLoad height={200}>
       <div

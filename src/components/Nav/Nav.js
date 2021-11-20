@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState, useRef } from 'react'
+import React, { useCallback, useRef, useState } from 'react'
 import Logo from './atoms/Logo'
 import Menu from './atoms/Menu'
 import Toggle from './atoms/Toggle'
@@ -16,26 +16,20 @@ const Nav = () => {
   const ref = useRef()
   const [toggleClicked, setToggleClicked] = useState(false)
 
-  const onClickedOutside = useCallback(
-    (e) => {
-      if (toggleClicked && ref.current && !ref.current.contains(e.target)) {
-        setToggleClicked(false)
-        document.removeEventListener('mousedown', onClickedOutside)
-      }
-    },
-    [toggleClicked],
-  )
-
-  const onScroll = useCallback(
-    (e) => {
-      const scrollTop = e.target.scrollingElement.scrollTop
-      console.log(scrollTop)
+  const onClickedOutside = useCallback((e) => {
+    if (toggleClicked && ref.current && !ref.current.contains(e.target)) {
       setToggleClicked(false)
+      document.removeEventListener('mousedown', onClickedOutside)
+    }
+  }, [])
 
-      document.removeEventListener('scroll', onScroll)
-    },
-    [toggleClicked],
-  )
+  const onScroll = useCallback((e) => {
+    const scrollTop = e.target.scrollingElement.scrollTop
+    console.log(scrollTop)
+    setToggleClicked(false)
+
+    document.removeEventListener('scroll', onScroll)
+  }, [])
 
   const onToggleClickHandler = () => {
     setToggleClicked((prev) => !prev)

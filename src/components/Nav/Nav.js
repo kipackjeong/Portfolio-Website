@@ -16,12 +16,15 @@ const Nav = () => {
   const ref = useRef()
   const [toggleClicked, setToggleClicked] = useState(false)
 
-  const onClickedOutside = useCallback((e) => {
-    if (toggleClicked && ref.current && !ref.current.contains(e.target)) {
-      setToggleClicked(false)
-      document.removeEventListener('mousedown', onClickedOutside)
-    }
-  }, [])
+  const onClickedOutside = useCallback(
+    (e) => {
+      if (toggleClicked && ref.current && !ref.current.contains(e.target)) {
+        setToggleClicked(false)
+        document.removeEventListener('mousedown', onClickedOutside)
+      }
+    },
+    [toggleClicked],
+  )
 
   const onScroll = useCallback((e) => {
     const scrollTop = e.target.scrollingElement.scrollTop

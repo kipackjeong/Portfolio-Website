@@ -1,23 +1,10 @@
 import React from 'react'
-import { Link } from 'react-scroll'
-
-const Menu = ({ items, styles }) => {
+import MenuItem from './MenuItem'
+const Menu = ({ items, styles, onClick }) => {
   return (
     <div className={styles.menu}>
       {items.map((item) => (
-        <>
-          <Link
-            className={styles.menu__item}
-            style={{ cursor: 'pointer' }}
-            to={item.link}
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-          >
-            {item.title}
-          </Link>
-        </>
+        <MenuItem item={item} styles={styles} onClick={onClick}></MenuItem>
       ))}
     </div>
   )

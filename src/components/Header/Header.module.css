@@ -82,8 +82,7 @@
 .header__frame__profile img {
   width: 80%;
   border-radius: 50%;
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.5),
-    0 6px 20px 0 rgba(255, 253, 253, 0.19);
+  box-shadow: 0 6px 20px 0 rgba(255, 253, 253, 0.801);
 }
 /*#endregion profile*/
 

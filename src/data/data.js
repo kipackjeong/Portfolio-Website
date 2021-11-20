@@ -4,9 +4,8 @@ import dailyImage from '../images/projects/daily.gif'
 import webScrapperImage from '../images/projects/webscrapper.gif'
 import portfolioImage from '../images/projects/portfolio.gif'
 import tetrisImage from '../images/projects/tetris.gif'
-import blankImage from '../images/projects/blank.jpg'
-
 //#endregion
+
 import csharpImage from '../images/skills/csharp.png'
 import cssImage from '../images/skills/css.png'
 import htmlImage from '../images/skills/html.png'
@@ -97,11 +96,6 @@ const data = {
       url: 'https://github.com/kipackjeong/Tetris',
       techImage: [csharpImage],
       imageSrc: tetrisImage,
-    },
-    {
-      title: '--',
-      techImage: [''],
-      imageSrc: blankImage,
     },
   ],
 }

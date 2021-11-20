@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { useRef } from 'react'
 
 import Layout from './components/Layout/Layout'
 import Nav from './components/Nav/Nav'
@@ -6,10 +6,9 @@ import Header from './components/Header/Header'
 import Skills from './components/Skills/Skills'
 import About from './components/About/About'
 import Contact from './components/Contact/Contact'
+import Work from './components/Work/Work'
+
 import styles from './App.module.css'
-
-const Work = React.lazy(() => import('./components/Work/Work'))
-
 function App() {
   return (
     <div className={styles.App}>
@@ -19,10 +18,7 @@ function App() {
           <Header />
           <About />
           <Skills />
-          <Suspense fallback={<div>loading</div>}>
-            <Work />
-          </Suspense>
-
+          <Work />
           <Contact />
         </main>
       </Layout>

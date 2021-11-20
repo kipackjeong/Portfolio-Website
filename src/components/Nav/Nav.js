@@ -16,26 +16,34 @@ const Nav = () => {
   const ref = useRef()
   const [toggleClicked, setToggleClicked] = useState(false)
 
-  useEffect(() => {
-    const checkIfClickedOutside = (e) => {
+  const onClickedOutside = useCallback(
+    (e) => {
       if (toggleClicked && ref.current && !ref.current.contains(e.target)) {
         setToggleClicked(false)
+        document.removeEventListener('mousedown', onClickedOutside)
       }
-    }
+    },
+    [toggleClicked],
+  )
 
-    document.addEventListener('mousedown', checkIfClickedOutside)
+  const onScroll = useCallback(
+    (e) => {
+      const scrollTop = e.target.scrollingElement.scrollTop
+      console.log(scrollTop)
+      setToggleClicked(false)
 
-    return () => {
-      document.removeEventListener('mousedown', checkIfClickedOutside)
-    }
-  }, [toggleClicked])
+      document.removeEventListener('scroll', onScroll)
+    },
+    [toggleClicked],
+  )
 
   const onToggleClickHandler = () => {
     setToggleClicked((prev) => !prev)
+    document.addEventListener('scroll', onScroll)
+    document.addEventListener('mousedown', onClickedOutside)
   }
-
   // changes the items selected prop.
-  const onClickHandler = (item) => {
+  const onMenuItemClickHandler = (item) => {
     setItems((prev) => {
       const newState = [...prev]
       newState.map((pItem) => {
@@ -50,19 +58,32 @@ const Nav = () => {
     })
   }
 
+  const selectMenuType = () => {
+    const toggleClass = toggleClicked ? styles.show : ''
+    const toggleMenu = (
+      <>
+        <Toggle styles={styles} onClick={onToggleClickHandler} />
+        <Menu
+          className={toggleClass}
+          items={items}
+          styles={styles}
+          onClick={onMenuItemClickHandler}
+        ></Menu>
+      </>
+    )
+    const menu =
+      windowWidth < 729 ? (
+        toggleMenu
+      ) : (
+        <Menu items={items} styles={styles} onClick={onMenuItemClickHandler} />
+      )
+    return menu
+  }
+
   return (
     <nav id={styles.nav} ref={ref}>
       <Logo styles={styles} />
-      {windowWidth < 729 ? (
-        <>
-          <Toggle styles={styles} onClick={onToggleClickHandler} />
-          {toggleClicked ? (
-            <Menu items={items} styles={styles} onClick={onClickHandler}></Menu>
-          ) : null}
-        </>
-      ) : (
-        <Menu items={items} styles={styles} onClick={onClickHandler} />
-      )}
+      {selectMenuType()}
     </nav>
   )
 }

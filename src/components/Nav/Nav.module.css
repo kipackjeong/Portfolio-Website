@@ -73,16 +73,19 @@
     height: 3.5rem;
   }
   .menu {
+    display: flex;
     position: fixed;
-    top: 3.5rem;
+    top: -40rem;
     flex-direction: column;
-    height: 50vh;
     width: 100vw;
+    height: 50vh;
     justify-content: space-around;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.75);
+    transition: top 500ms ease-out;
   }
-  .menu:focus {
-    display: none;
+  .show {
+    top: 3rem;
+    transition: top 500ms ease-out;
   }
 }

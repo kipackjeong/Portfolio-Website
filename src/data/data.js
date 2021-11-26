@@ -1,9 +1,17 @@
 //#region Project Images
-import foodAppImage from '../images/projects/foodApp.gif'
-import dailyImage from '../images/projects/daily.gif'
-import webScrapperImage from '../images/projects/webscrapper.gif'
-import portfolioImage from '../images/projects/portfolio.gif'
-import tetrisImage from '../images/projects/tetris.gif'
+import foodAppGif from '../images/projects/foodapp-gif.gif'
+import dailyGif from '../images/projects/daily-gif.gif'
+import webScrapperGif from '../images/projects/webscrapper-gif.gif'
+import portfolioGif from '../images/projects/portfolio-gif.gif'
+import tetrisGif from '../images/projects/tetris-gif.gif'
+import transwordGif from '../images/projects/transword-gif.gif'
+
+import foodAppImage from '../images/projects/foodapp-img.png'
+import dailyImage from '../images/projects/daily-img.png'
+import webScrapperImage from '../images/projects/webscrapper-img.png'
+import portfolioImage from '../images/projects/portfolio-img.png'
+import tetrisImage from '../images/projects/tetris-img.png'
+import transwordImage from '../images/projects/transword-img.png'
 //#endregion
 
 import csharpImage from '../images/skills/csharp.png'
@@ -68,34 +76,46 @@ const data = {
   skills: [{ title: 'Frontend' }, { title: 'Backend' }],
   projects: [
     {
+      title: 'Trans Word',
+      url: 'https://kipackjeong.github.io/translator-web/',
+      techImage: [reactImage, jsImage, cssImage, htmlImage],
+      imageSrc: transwordImage,
+      gifSrc: transwordGif,
+    },
+    {
       title: 'Food Order App',
       url: 'https://kipackjeong.github.io/FoodReactApp/',
-      techImage: [reactImage, jsImage],
+      techImage: [reactImage, jsImage, cssImage, htmlImage],
       imageSrc: foodAppImage,
+      gifSrc: foodAppGif,
     },
     {
       title: 'Daily App',
       url: 'https://github.com/kipackjeong/DailyWebApp',
       techImage: [blazorImage, netImage, csharpImage],
       imageSrc: dailyImage,
+      gifSrc: dailyGif,
     },
     {
       title: 'Job Scrapper',
       url: 'https://github.com/kipackjeong/Webscrapper_JobSearch',
       techImage: [flaskImage, pythonImage],
       imageSrc: webScrapperImage,
+      gifSrc: webScrapperGif,
     },
     {
       title: 'Portfolio Website',
       url: 'https://github.com/kipackjeong/Portfolio-Website',
       techImage: [reactImage, jsImage],
       imageSrc: portfolioImage,
+      gifSrc: portfolioGif,
     },
     {
       title: 'Tetris Console Game',
       url: 'https://github.com/kipackjeong/Tetris',
       techImage: [csharpImage],
       imageSrc: tetrisImage,
+      gifSrc: tetrisGif,
     },
   ],
 }

@@ -46,7 +46,6 @@
 }
 .work__frame__card__content:hover {
   opacity: 0;
-  transform: scale(0.3);
 }
 .work__frame__card a {
   text-decoration: none;

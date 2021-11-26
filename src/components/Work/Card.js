@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import LazyLoad from 'react-lazyload'
 
-const Card = ({ styles, heading, imgUrl, techImage, projectLink }) => {
+const Card = ({ styles, heading, imgUrl, gifUrl, techImage, projectLink }) => {
+  const [isMouseOver, setIsMouseEnter] = useState(false)
+
+  function onMouseEnterHandler() {
+    setIsMouseEnter(true)
+  }
+  function onMouseLeaveHandler() {
+    setIsMouseEnter(false)
+  }
+
   return (
     <LazyLoad height={200}>
       <div
@@ -13,9 +22,17 @@ const Card = ({ styles, heading, imgUrl, techImage, projectLink }) => {
             ')',
         }}
       >
-        <img src={imgUrl} alt="1" />
+        {isMouseOver ? (
+          <img src={gifUrl} alt={`${heading} img`} />
+        ) : (
+          <img src={imgUrl} alt={`${heading} img`} />
+        )}
 
-        <div className={styles.work__frame__card__content}>
+        <div
+          className={styles.work__frame__card__content}
+          onMouseEnter={onMouseEnterHandler}
+          onMouseLeave={onMouseLeaveHandler}
+        >
           <a
             href={projectLink ? projectLink : '#'}
             target="_blank"
